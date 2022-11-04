@@ -6,8 +6,9 @@ body {
     background-color: var(--light-gray);
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 10rem;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 main {
@@ -18,8 +19,7 @@ main {
     column-gap: 0;
     font-family: 'Karla', sans-serif;
     border-radius: 1rem;
-    min-width: 30rem;
-    max-width: 40rem;
+    box-sizing: border-box;
 }
 :root {
     --cyan : hsl(179, 62%, 43%);
@@ -32,7 +32,9 @@ main {
 .top {
     background-color: white;
     border-radius: 20px 20px 0 0;
-    padding: 2rem 3rem;
+    padding: 1.5rem 2.5rem;
+    width: 40rem;
+    box-sizing: border-box;
 }
 .top h2 {
     color: var(--cyan);
@@ -51,6 +53,7 @@ main {
     border-radius: 0 0 0 1rem;
     padding: 1.5rem 2.5rem;
     width: 20rem;
+    box-sizing: border-box;
 }
 .money{
     font-size: 2rem;
@@ -67,6 +70,7 @@ main {
     border-radius: 0 0 1rem 0;
     padding: 1.5rem 2.5rem;
     width: 20rem;
+    box-sizing: border-box;
 }
 .row {
     display: flex;
@@ -83,4 +87,27 @@ main {
     height: 3rem;
     border-radius: 0.4rem;
     font-size: large;
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        margin: 10rem;
+    }
+    main {
+        display: grid;
+        grid-template-areas:
+            'top top top top top top'
+            'left left left left left left'
+            'right right right right right right';
+        column-gap: 0;
+    }
+    .top {
+        width: 20rem;
+    }
+    .left {
+        border-radius: 0;
+    }
+    .right {
+        border-radius: 0 0 1rem 1rem;
+    }
 }
