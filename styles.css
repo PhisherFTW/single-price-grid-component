@@ -1,0 +1,86 @@
+.top {grid-area: top;}
+.left {grid-area: left;}
+.right {grid-area: right;}
+
+body {
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+main {
+    display: grid;
+    grid-template-areas: 
+    'top top top top top top'
+    'left left left right right right';
+    column-gap: 0;
+    font-family: 'Karla', sans-serif;
+    border-radius: 1rem;
+    min-width: 30rem;
+    max-width: 40rem;
+}
+:root {
+    --cyan : hsl(179, 62%, 43%);
+    --difcyan : hsla(179, 62%, 47%, 1);
+    --brightyellow : hsl(71, 73%, 54%);
+    --light-gray : hsl(204, 43%, 93%);
+    --grayish-blue : hsl(218, 22%, 67%);
+
+}
+.top {
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+    padding: 2rem 3rem;
+}
+.top h2 {
+    color: var(--cyan);
+    margin-top: 0;
+}
+.topp1 {
+    color: var(--brightyellow);
+    font-weight: 400;
+}
+.top :last-child {
+    color: var(--grayish-blue);
+}
+.left {
+    background-color: var(--cyan);
+    color: var(--light-gray);
+    border-radius: 0 0 0 1rem;
+    padding: 1.5rem 2.5rem;
+    width: 20rem;
+}
+.money{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 10px;
+    opacity: 1;
+}
+.pm {
+    opacity: 0.5;
+}
+.right {
+    background-color: var(--difcyan);
+    color: var(--light-gray);
+    border-radius: 0 0 1rem 0;
+    padding: 1.5rem 2.5rem;
+    width: 20rem;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    max-height: 2.5rem;
+}
+.signup {
+    border: none;
+    width: 15rem;
+    color: var(--light-gray);
+    background-color: var(--brightyellow);
+    height: 3rem;
+    border-radius: 0.4rem;
+    font-size: large;
+}
